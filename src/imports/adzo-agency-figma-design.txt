@@ -1,0 +1,120 @@
+Design a bold, modern Gen-Z style digital marketing agency website in Figma for a brand named “Brandmic media”.
+
+Inspiration:
+Clean structured agency layout with hero, stats, about, services, CTA banner, team, newsletter and footer. Minimal but visually engaging.
+
+Brand Colors:
+Primary: #FF0091 (vibrant pink)
+Background: #F9F9F9 (soft white)
+Dark Sections: #000000 (black)
+
+Typography:
+Bold modern sans-serif (Inter, Satoshi, or Space Grotesk style)
+Large expressive hero typography (64–72px)
+Strong contrast hierarchy
+Use lowercase + bold styling for Gen-Z feel
+
+Style Direction:
+- Gen-Z modern startup vibe
+- Clean but expressive
+- Large typography
+- Bold spacing
+- Floating 3D abstract elements (pink glossy blobs / gradient spheres)
+- Soft glow effects
+- Rounded cards (20–24px radius)
+- Glassmorphism subtle cards
+- Smooth layered depth
+
+Layout (1440px desktop, 12-column grid)
+
+1. Hero Section:
+Headline:
+“We Build Brands With Direction.”
+
+Subheadline:
+Strategy Meets Creativity.
+
+Short supporting text:
+Brandmic media helps ambitious brands grow with clarity, intention, and performance-driven design.
+
+Buttons:
+Primary (pink solid): Let’s Build
+Secondary (outline black): Our Approach
+
+Right side:
+Modern professional image with floating 3D pink orb and soft glow behind.
+Add small badge text:
+“Design With Direction”
+
+2. Stats Section:
+Minimal horizontal layout.
+Numbers in pink:
++Brands Guided
++Strategies Built
++Creative Systems Designed
++Growth-Focused Solutions
+
+Keep wording honest (no fake project counts).
+
+3. About / Approach Section:
+Section title:
+Direction Before Growth.
+
+4-step grid layout:
+Discover
+Define
+Design
+Deploy
+
+Use 3D isometric minimal icons with subtle pink highlight.
+
+4. Services Section:
+Card layout (3x2 grid)
+White cards with soft shadows.
+On hover:
+Card turns black
+Text becomes white
+Pink accent glow border
+
+Services:
+Brand Strategy
+Visual Identity
+Performance Marketing
+Social Media
+Paid Ads
+Web Design
+
+5. Black CTA Banner:
+Full-width black background.
+Large bold white headline:
+Where Strategy Meets Creativity.
+
+Pink glowing CTA button:
+Start With Direction
+
+Add subtle 3D gradient sphere in background.
+
+6. Team Section:
+Minimal layout.
+Rounded images.
+Pink hover effects on social icons.
+
+7. Newsletter Section:
+Black background.
+Subtle pink gradient blur.
+Headline:
+Stay Ahead. Stay Strategic.
+Email field + pink subscribe button.
+
+8. Footer:
+Black background.
+Pink logo text “Brandmic media”
+White links with pink hover effect.
+
+Design Details:
+Use Auto Layout everywhere.
+Use components & variants.
+Spacing system based on 8px grid.
+Large whitespace.
+Soft shadows (0 20px 40px rgba(0,0,0,0.08)).
+Fully responsive frames (Desktop / Tablet / Mobile).
