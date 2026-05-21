@@ -11,16 +11,16 @@ const testimonials = [
     rating: 5
   },
   {
-    name: 'Michael Chen',
-    role: 'Founder, GrowthLabs',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop',
+    name: 'Lokesh S',
+    role: 'Founder',
+    image: 'https://cdn-icons-png.flaticon.com/512/8345/8345328.png?w=200&h=200&fit=crop',
     content: 'Working with Brandmic media was an absolute pleasure. They delivered our e-commerce platform ahead of schedule and the results have been outstanding.',
     rating: 5
   },
   {
-    name: 'Emily Rodriguez',
-    role: 'Marketing Director, FitLife',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop',
+    name: 'Ramesh Kumar',
+    role: 'Marketing Director',
+    image: 'https://cdn-icons-png.flaticon.com/512/8345/8345328.png?w=200&h=200&fit=crop',
     content: 'The team at Brandmic media is incredibly talented and professional. Our app launch was a huge success thanks to their innovative design and marketing strategy.',
     rating: 5
   }
