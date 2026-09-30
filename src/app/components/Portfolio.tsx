@@ -58,13 +58,13 @@ export function Portfolio() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-block px-4 py-2 bg-pink-900/30 rounded-full mb-4">
-            <span className="text-sm font-semibold text-[#fe6d12]">OUR WORK</span>
+            <span className="text-sm font-semibold text-[#fe6d12] tracking-wide uppercase">OUR WORK</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Featured Projects
+            Featured Projects &amp; Creative Case Studies
           </h2>
           <p className="text-xl text-gray-400">
-            Explore our portfolio of successful projects and creative solutions
+            Explore our curated portfolio of successful brand identities, commercial video edits, and digital campaigns.
           </p>
         </div>
 
@@ -76,8 +76,8 @@ export function Portfolio() {
               onClick={() => setActiveCategory(category)}
               variant={activeCategory === category ? 'default' : 'outline'}
               className={activeCategory === category 
-                ? 'bg-[#fe6d12] hover:bg-[#e85f00] text-white' 
-                : 'border-gray-700 text-[#fe6d12] hover:bg-gray-800 hover:text-white'
+                ? 'bg-[#fe6d12] hover:bg-[#e85f00] text-white cursor-pointer' 
+                : 'border-gray-700 text-[#fe6d12] hover:bg-gray-800 hover:text-white cursor-pointer'
               }
             >
               {category}
@@ -95,19 +95,26 @@ export function Portfolio() {
               <div className="relative overflow-hidden aspect-[4/3]">
                 <ImageWithFallback
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} - Brandmic Media ${project.category} project`}
+                  width={600}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <Button
-                      size="sm"
-                      variant="secondary"
-                      className="gap-2"
-                    >
-                      View Project
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
+                    <a href="#contact">
+                      <Button
+                        size="sm"
+                        variant="secondary"
+                        className="gap-2 cursor-pointer"
+                        aria-label={`Discuss a project like ${project.title}`}
+                      >
+                        View Project
+                        <ExternalLink className="w-4 h-4" />
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>

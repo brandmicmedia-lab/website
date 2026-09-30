@@ -13,39 +13,51 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
     { label: 'Services', href: '#services' },
     { label: 'Portfolio', href: '#portfolio' },
     { label: 'About', href: '#about' },
+    { label: 'FAQ', href: '#faq' },
     { label: 'Contact', href: '#contact' }
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center">
-            <img src={logo} alt="Brandmic media" className="" />
+          <a href="#home" className="flex items-center gap-2" aria-label="Brandmic Media Home">
+            <img
+              src={logo}
+              alt="Brandmic Media - Creative Branding Studio Logo"
+              width="150"
+              height="36"
+              className="h-9 w-auto object-contain"
+              loading="eager"
+            />
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <nav aria-label="Main Navigation" className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-gray-300 hover:text-[#fe6d12] transition-colors font-medium"
+                className="text-gray-300 hover:text-[#fe6d12] transition-colors font-medium text-sm lg:text-base"
               >
                 {item.label}
               </a>
             ))}
-            <Button 
-              className="bg-[#fe6d12] hover:bg-[#e85f00] text-white"
-            >
-              Get Started
-            </Button>
-          </div>
+            <a href="#contact">
+              <Button 
+                className="bg-[#fe6d12] hover:bg-[#e85f00] text-white cursor-pointer"
+              >
+                Get Started
+              </Button>
+            </a>
+          </nav>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={mobileMenuOpen}
             className="md:hidden p-2 rounded-lg hover:bg-gray-800"
           >
             {mobileMenuOpen ? (
@@ -60,7 +72,7 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-gray-800 bg-gray-900">
-          <div className="px-4 py-4 space-y-3">
+          <nav aria-label="Mobile Navigation" className="px-4 py-4 space-y-3">
             {navItems.map((item) => (
               <a
                 key={item.label}
@@ -72,15 +84,17 @@ export function Navigation({ mobileMenuOpen, setMobileMenuOpen }: NavigationProp
               </a>
             ))}
             <div className="pt-2">
-              <Button 
-                className="w-full bg-[#fe6d12] hover:bg-[#e85f00] text-white"
-              >
-                Get Started
-              </Button>
+              <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="block">
+                <Button 
+                  className="w-full bg-[#fe6d12] hover:bg-[#e85f00] text-white"
+                >
+                  Get Started
+                </Button>
+              </a>
             </div>
-          </div>
+          </nav>
         </div>
       )}
-    </nav>
+    </header>
   );
 }

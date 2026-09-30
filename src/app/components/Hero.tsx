@@ -12,7 +12,7 @@ export function Hero() {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 border border-gray-700 rounded-full shadow-sm">
-              <img src={starLogo} alt="" className="w-5 h-5" />
+              <img src={starLogo} alt="Creative branding studio award badge" width="20" height="20" className="w-5 h-5" />
               <span className="text-sm font-semibold text-gray-300 font-[Geist]">Leading Branding Studio</span>
             </div>
 
@@ -22,33 +22,37 @@ export function Hero() {
             </h1>
 
             <p className="text-lg text-gray-400 leading-relaxed max-w-xl font-[Geist]">
-              Elevate your business with data-driven digital marketing strategies. 
-              We combine creativity, technology, and analytics to deliver measurable growth.
+              Brandmic Media is a creative branding studio and digital marketing agency. 
+              We combine strategic brand design, video editing, and performance advertising to scale ambitious businesses with measurable impact.
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button 
-                size="lg"
-                className="bg-[#fe6d12] hover:bg-[#e85f00] text-white gap-2 px-8 h-14 text-base"
-              >
-                Get Started Now
-                <ArrowRight className="w-5 h-5" />
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="gap-2 px-8 h-14 text-base border-2 border-gray-700 text-[#fe6d12] hover:bg-gray-800"
-              >
-                Learn More
-              </Button>
+              <a href="#contact">
+                <Button 
+                  size="lg"
+                  className="bg-[#fe6d12] hover:bg-[#e85f00] text-white gap-2 px-8 h-14 text-base cursor-pointer"
+                >
+                  Get Started Now
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
+              <a href="#services">
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="gap-2 px-8 h-14 text-base border-2 border-gray-700 text-[#fe6d12] hover:bg-gray-800 cursor-pointer"
+                >
+                  Explore Services
+                </Button>
+              </a>
             </div>
 
             {/* Trust Indicators */}
             <div className="flex items-center gap-8 pt-4">
               <div className="flex items-center gap-2">
-                <div className="flex">
+                <div className="flex" aria-label="5 star client rating">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[#fe6d12] text-[#fe6d12]" />
+                    <Star key={i} className="w-5 h-5 fill-[#fe6d12] text-[#fe6d12]" aria-hidden="true" />
                   ))}
                 </div>
                 <span className="text-sm font-semibold text-gray-300 font-[Geist]">5.0</span>
@@ -65,7 +69,11 @@ export function Hero() {
             <div className="relative">
               <ImageWithFallback
                 src={brandImg}
-                alt="Professional team meeting"
+                alt="Brandmic Media creative team collaborating on digital marketing and branding campaigns"
+                width={600}
+                height={450}
+                loading="eager"
+                fetchPriority="high"
                 className="rounded-3xl shadow-2xl w-full object-cover aspect-[4/3]"
               />
               

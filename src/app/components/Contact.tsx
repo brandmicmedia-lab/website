@@ -89,13 +89,13 @@ export function Contact() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block px-4 py-2 bg-pink-900/30 rounded-full mb-4">
-            <span className="text-sm font-semibold text-[#fe6d12]">GET IN TOUCH</span>
+            <span className="text-sm font-semibold text-[#fe6d12] tracking-wide uppercase">GET IN TOUCH</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Let's Start A Project
+            Let's Start A Project: Contact Brandmic Media
           </h2>
           <p className="text-xl text-gray-400">
-            Ready to bring your ideas to life? Contact us today and let's create something amazing together
+            Ready to bring your brand vision to life? Contact our creative branding and digital marketing team today for a custom proposal.
           </p>
         </div>
 
@@ -111,12 +111,13 @@ export function Contact() {
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-pink-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-6 h-6 text-[#fe6d12]" />
+                      <Icon className="w-6 h-6 text-[#fe6d12]" aria-hidden="true" />
                     </div>
                     <div>
                       <div className="font-bold text-white mb-1">{info.title}</div>
                       <a
                         href={info.link}
+                        aria-label={`${info.title}: ${info.content}`}
                         className="text-gray-400 hover:text-[#fe6d12] transition-colors text-sm"
                       >
                         {info.content}
@@ -158,6 +159,7 @@ export function Contact() {
                       onChange={handleChange}
                       placeholder="John Doe"
                       required
+                      autoComplete="name"
                       className="h-12 bg-gray-900 border-gray-700 text-white placeholder:text-gray-500"
                     />
                   </div>
@@ -173,6 +175,7 @@ export function Contact() {
                       onChange={handleChange}
                       placeholder="john@example.com"
                       required
+                      autoComplete="email"
                       className="h-12 bg-gray-900 border-gray-700 text-white placeholder:text-gray-500"
                     />
                   </div>
@@ -212,7 +215,8 @@ export function Contact() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-[#fe6d12] hover:bg-[#e85f00] text-white gap-2"
+                  className="w-full bg-[#fe6d12] hover:bg-[#e85f00] text-white gap-2 cursor-pointer"
+                  aria-label="Send project inquiry message"
                 >
                   Send Message
                   <Send className="w-5 h-5" />

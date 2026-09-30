@@ -28,18 +28,18 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-950 to-gray-900">
+    <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-950 to-gray-900">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block px-4 py-2 bg-gray-800 rounded-full mb-4 shadow-sm border border-gray-700">
-            <span className="text-sm font-semibold text-[#fe6d12]">TESTIMONIALS</span>
+            <span className="text-sm font-semibold text-[#fe6d12] tracking-wide uppercase">TESTIMONIALS</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            What Our Clients Say
+            What Our Clients Say: Real Feedback &amp; Reviews
           </h2>
           <p className="text-xl text-gray-400">
-            Don't just take our word for it - hear from our satisfied clients
+            Don't just take our word for it — explore verified feedback from brands we've helped launch and grow.
           </p>
         </div>
 
@@ -51,9 +51,9 @@ export function Testimonials() {
               className="p-8 bg-gray-800 border-gray-700 shadow-lg hover:shadow-xl transition-shadow"
             >
               {/* Stars */}
-              <div className="flex gap-1 mb-6">
+              <div className="flex gap-1 mb-6" aria-label={`${testimonial.rating} star rating`}>
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-[#fe6d12] text-[#fe6d12]" />
+                  <Star key={i} className="w-5 h-5 fill-[#fe6d12] text-[#fe6d12]" aria-hidden="true" />
                 ))}
               </div>
 
@@ -66,7 +66,11 @@ export function Testimonials() {
               <div className="flex items-center gap-4">
                 <ImageWithFallback
                   src={testimonial.image}
-                  alt={testimonial.name}
+                  alt={`Client review by ${testimonial.name}, ${testimonial.role}`}
+                  width={48}
+                  height={48}
+                  loading="lazy"
+                  decoding="async"
                   className="w-12 h-12 rounded-full object-cover"
                 />
                 <div>

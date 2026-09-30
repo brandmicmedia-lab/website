@@ -1,0 +1,15 @@
+# Robots.txt for Brandmic Media
+# https://brandmicmedia.com
+
+User-agent: *
+Allow: /
+
+# Disallow private and administrative paths
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /private/
+
+# Host and Sitemap
+Host: https://brandmicmedia.com
+Sitemap: https://brandmicmedia.com/sitemap.xml
